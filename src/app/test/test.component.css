@@ -1,0 +1,12 @@
+.text-special{
+	font-style: italic;
+}
+
+.text-success{
+	font-style: bold;
+	color: green;
+}
+.text-failure{
+	font-style: bold;
+	color: red;
+}
