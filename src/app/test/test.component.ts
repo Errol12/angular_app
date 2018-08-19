@@ -18,12 +18,20 @@ import { Component, OnInit } from '@angular/core';
   			<button (click)="onClick()">Greet</button>
   			<button (click)="onClick1($event)">Event Greet</button>
   			<button (click)="name='Robert'">Event Greet</button>
+  			<br>
+  			<input type="text" #myInput/>
+  			<button (click)="onClick3(myInput)">Greet 3</button>
+
+  			<br>
+  			<input type="text" [(ngModel)]="name1"/>
+  			{{name1}}
   			`,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
 
   public name = "Mark";
+  public name1= "sd";
   public myId="test_id";
   public success = "text-success";
   public hasError = false;
@@ -50,6 +58,12 @@ export class TestComponent implements OnInit {
 
   onClick1(event){
   	console.log(event);
+  	this.name = "Errol";
+  }
+
+
+  onClick3(input){
+  	console.log(input.value);
   	this.name = "Errol";
   }
 
