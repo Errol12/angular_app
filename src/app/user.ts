@@ -1,1 +1,4 @@
-user.ts
+export interface IUser{
+	id: 	number,
+	name: string
+}
